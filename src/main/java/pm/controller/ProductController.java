@@ -23,15 +23,15 @@ public class ProductController {
 	public String addProduct(HttpSession session, ModelMap map) {
 		return service.addProduct(session, map);
 	}
-
-	@PostMapping("/add-product")
-	public String addProduct(MyProduct product, ModelMap map, HttpSession session) {
-		return service.addProduct(session, map, product);
-	}
 	@RequestMapping("/fetch-product")
 	public String fetchProducts(HttpSession session,ModelMap map) {
 		return service.fetchProducts(session,map);
 	}
+	@PostMapping("/add-product")
+	public String addProduct(MyProduct product, ModelMap map, HttpSession session) {
+		return service.addProduct(session, map, product);
+	}
+	
 	@GetMapping("/delete")
 	public String deleteProduct(@RequestParam int id, HttpSession session, ModelMap map) {
 		return service.deleteProduct(id, map, session);

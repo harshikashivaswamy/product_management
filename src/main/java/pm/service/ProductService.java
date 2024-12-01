@@ -57,7 +57,7 @@ public class ProductService {
 		if (session.getAttribute("username") != null) {
 			dao.delete(id);
 			map.put("message", "Product Removed Success");
-			return "fetch-products";
+			return "fetch-product";
 			
 		} else {
 			map.put("message", "Invalid Session, Login First");

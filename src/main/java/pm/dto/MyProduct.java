@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+ @Repository
 @Entity
 public class MyProduct {
 	@Id
